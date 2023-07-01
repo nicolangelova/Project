@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\New folder (2)\\Asp.Net-Core-MVC-Identity---Complete-User-Authentication-System-main\\AuthSystem\\Expense Tracker.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\New folder (2)\\Project\\Project\\AuthSystem\\Expense Tracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\New folder (2)\\Asp.Net-Core-MVC-Identity---Complete-User-Authentication-System-main\\AuthSystem\\Expense Tracker.csproj": {
+    "C:\\Users\\Admin\\Desktop\\New folder (2)\\Project\\Project\\AuthSystem\\Expense Tracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\New folder (2)\\Asp.Net-Core-MVC-Identity---Complete-User-Authentication-System-main\\AuthSystem\\Expense Tracker.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\New folder (2)\\Project\\Project\\AuthSystem\\Expense Tracker.csproj",
         "projectName": "Expense Tracker",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\New folder (2)\\Asp.Net-Core-MVC-Identity---Complete-User-Authentication-System-main\\AuthSystem\\Expense Tracker.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\New folder (2)\\Project\\Project\\AuthSystem\\Expense Tracker.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\New folder (2)\\Asp.Net-Core-MVC-Identity---Complete-User-Authentication-System-main\\AuthSystem\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\New folder (2)\\Project\\Project\\AuthSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -57,17 +57,21 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[7.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[7.0.7, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.0.7, )"
+            },
+            "Syncfusion.EJ2.AspNet.Core": {
+              "target": "Package",
+              "version": "[22.1.36, )"
             }
           },
           "imports": [
