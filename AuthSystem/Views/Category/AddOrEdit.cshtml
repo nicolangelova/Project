@@ -1,7 +1,7 @@
 ﻿@model Expense_Tracker.Models.Category
 
 @{
-    ViewData["PageTitle"] = Model.CategoryId == 0 ? "AddOrEdit a new category" : "Edit category";
+    ViewData["PageTitle"] = Model.CategoryId == 0 ? "Create a new category" : "Edit category";
 }
 
 
@@ -31,9 +31,9 @@
                 <ejs-button id="submit" type="submit" content="Submit" cssClass="e-success"></ejs-button>
             </form>
         </div>
-
-
     </div>
+
+
     <div class="col-md-5">
         <div class="widget h-100 d-flex justify-content-center align-items-center">
             <i class="fa-solid fa-shapes fa-2xl"></i>

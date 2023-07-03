@@ -10,6 +10,7 @@ namespace Expense_Tracker.Models
         public int CurrencyId { get; set; }
 
         [Column(TypeName = "nvarchar(20)")]
+        [Required(ErrorMessage = "Name is required.")]
         public string Name{ get; set; }
     }
 }

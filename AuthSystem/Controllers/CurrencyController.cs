@@ -26,24 +26,7 @@ namespace Expense_Tracker.Controllers
                           Problem("Entity set 'ApplicationDbContext.Currencies'  is null.");
         }
 
-        // GET: Currency/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Currencies == null)
-            {
-                return NotFound();
-            }
-
-            var currency = await _context.Currencies
-                .FirstOrDefaultAsync(m => m.CurrencyId == id);
-            if (currency == null)
-            {
-                return NotFound();
-            }
-
-            return View(currency);
-        }
-
+        
         // GET: Currency/AddOrEdit
         public IActionResult AddOrEdit(int id=0)
         {
@@ -74,23 +57,6 @@ namespace Expense_Tracker.Controllers
 
         
 
-        // GET: Currency/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Currencies == null)
-            {
-                return NotFound();
-            }
-
-            var currency = await _context.Currencies
-                .FirstOrDefaultAsync(m => m.CurrencyId == id);
-            if (currency == null)
-            {
-                return NotFound();
-            }
-
-            return View(currency);
-        }
 
         // POST: Currency/Delete/5
         [HttpPost, ActionName("Delete")]
@@ -111,9 +77,6 @@ namespace Expense_Tracker.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool CurrencyExists(int id)
-        {
-          return (_context.Currencies?.Any(e => e.CurrencyId == id)).GetValueOrDefault();
-        }
+        
     }
 }

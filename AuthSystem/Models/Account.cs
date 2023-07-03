@@ -10,10 +10,23 @@ namespace Expense_Tracker.Models
         public int AccountId { get; set; }
 
         [Column(TypeName = "nvarchar(20)")]
-        public string AccountName { get; set; } = "Main Account";
+        [Required(ErrorMessage = "Account name is required.")]
+        public string AccountName { get; set; } 
 
         //CurrencyId
         public int CurrencyId { get; set; }
-        public Currency Currency { get; set; }
+        public Currency? Currency { get; set; }
+
+
+        [NotMapped]
+        public string? CurrencyText
+        {
+            get
+            {
+                return Currency == null ? "" : Currency.Name;
+            }
+        }
+
+        
     }
 }

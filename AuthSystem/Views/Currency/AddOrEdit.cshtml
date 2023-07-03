@@ -1,32 +1,38 @@
 ﻿@model Expense_Tracker.Models.Currency
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["PageTitle"] = Model.CurrencyId == 0 ? "Create a new currency" : "Edit currency";
 }
 
 <div class="row">
     <div class="col-md-7">
-        <div class="widget p-5">
+        <div class="widget p-5" style="background-color:#212b36">
             <form asp-action="AddOrEdit">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" name="CurrencyId" value="@Model.CurrencyId" />
+
+
                 <div class="form-group">
-                    <ejs-textbox id="name" placeholder="Name" ejs-for="@Model.Name" ejs-for="Name" floatLabelType="Always"></ejs-textbox>
-                    <span asp-validation-for="Name" class="text-danger"></span>
+                    <ejs-textbox id="name" placeholder="Name" ejs-for="Name" floatLabelType="Always"></ejs-textbox>
+                    <span asp-validation-for="Name" class="text-danger fs-6"></span>
                 </div>
                 <ejs-button id="submit" type="submit" content="Submit" cssClass="e-success"></ejs-button>
-
         </form>
-        </div>
-
-        
+        </div>    
     </div>
+
+    <div class="col-md-5">
+        <div class="widget h-100 d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-shapes fa-2xl"></i>
+        </div>
+    </div>
+
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+@*
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+*@
+
