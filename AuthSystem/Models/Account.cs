@@ -11,9 +11,10 @@ namespace Expense_Tracker.Models
 
         [Column(TypeName = "nvarchar(20)")]
         [Required(ErrorMessage = "Account name is required.")]
-        public string AccountName { get; set; } 
+        public string AccountName { get; set; }
 
         //CurrencyId
+        [Range(1, int.MaxValue, ErrorMessage = "Please select a currency.")]
         public int CurrencyId { get; set; }
         public Currency? Currency { get; set; }
 
