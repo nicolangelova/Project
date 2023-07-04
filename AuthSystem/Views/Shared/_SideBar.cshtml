@@ -6,12 +6,12 @@
 
     menuItems.Add(new
     {
-        text = "Profil",
+        text = "Profile",
         separator = true,
     });
     menuItems.Add(new
     {
-        text = "Login / Log out",
+        text = "Login / Logout",
         iconCss = "fa-solid fa-exit",
         url = "Home"
     });
@@ -29,6 +29,12 @@
     });
     menuItems.Add(new
     {
+        text = "Bank Account",
+        url = "/BankAccount",
+        iconCss = "fa-solid fa-building-columns",
+    });
+    menuItems.Add(new
+    {
         text = "Categories",
         url = "/Category",
         iconCss = "fa-solid fa-folder-closed",
@@ -42,13 +48,13 @@
     menuItems.Add(new
     {
         text = "Accounts",
-        iconCss = "fa-solid fa-arrow-right-arrow-left",
+        iconCss = "fa-solid fa-file-invoice-dollar",
         url = "/Account"
     });
     menuItems.Add(new
     {
         text = "Currencies",
-        iconCss = "fa-solid fa-arrow-right-arrow-left",
+        iconCss = "fa-solid fa-money-bill-transfer",
         url = "/Currency"
     });
 

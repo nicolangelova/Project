@@ -5,15 +5,33 @@
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 }
 
+
+<style>
+    body {
+        background-color:;
+    }
+
+    html {
+    }
+
+    h2, label, .text-danger {
+        color: black;
+        font-size: 12px;
+    }
+</style>
+
+
 <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-    <h2>Create a new account.</h2>
+   <h2>Create a new account.</h2>
     <hr />
     <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
     <div class="row">
         <div class="col-6">
-            <div class="form-floating mb-3">
-                <input asp-for="Input.FirstName" class="form-control" autocomplete="firstname" aria-required="true" placeholder="first name" />
-                <label asp-for="Input.FirstName">First Name</label>
+            <div class="widget">
+                    <div class="form-floating mb-3">
+                    <input asp-for="Input.FirstName" class="form-control" autocomplete="firstname" aria-required="true" placeholder="first name" />
+                    <label asp-for="Input.FirstName">First Name</label>
+            </div>
             </div>
         </div>
         <div class="col-6">
@@ -39,6 +57,7 @@
         <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
     </div>
     <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+    
 </form>
 
 

@@ -36,7 +36,7 @@ namespace Expense_Tracker.Controllers
 
             //Total Expense
             int TotalExpense = SelectedTransactions
-                .Where(i => i.Category.Type == "Expense")
+                .Where(i => i.Category.Type == "Expense" || i.Category.Type =="Savings")
                 .Sum(j => j.Amount);
             ViewBag.TotalExpense = TotalExpense.ToString("C0");
 
@@ -63,7 +63,7 @@ namespace Expense_Tracker.Controllers
             ViewBag.RecentTransactions = await _context.Transactions
                 .Include(i => i.Category)
                 .OrderByDescending(j => j.Date)
-                .Take(7)
+                .Take(9)
                 .ToListAsync();
 
 

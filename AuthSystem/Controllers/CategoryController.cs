@@ -28,7 +28,7 @@ namespace Expense_Tracker.Controllers
         // GET: Category/AddOrEdit
         public IActionResult AddOrEdit(int id=0)
         {
-            ViewData["AccountId"] = new SelectList(_context.Accounts, "AccountId", "AccountId");
+            PopulateAccounts();
             if (id == 0)
                 return View(new Category());
             else
@@ -75,5 +75,14 @@ namespace Expense_Tracker.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
+        [NonAction]
+        public void PopulateAccounts()
+        {
+            var AccountCollection = _context.Accounts.ToList();
+            Account DefaultAccount = new Account() { AccountId = 0, AccountName = "Choose an Account" };
+            AccountCollection.Insert(0, DefaultAccount);
+            ViewBag.Accounts = AccountCollection;
+        }
     }
 }
